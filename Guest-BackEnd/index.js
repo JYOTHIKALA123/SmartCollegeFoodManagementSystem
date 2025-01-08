@@ -1,31 +1,26 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Register from './components/Register';
-import Login from './components/Login';
+const express = require('express');
+const connectDB = require('./config/database');
+const bodyParser = require('body-parser');
+require('dotenv').config();
+
+const cors = require('cors');
 
 
-import Home from './components/Home';
-import RequestFood from './components/RequestFood';
-import MessDashboard from './components/MessDashboard';
-import OfficeDashboard from './components/OfficeDashboard';
-import StudentDashboard from './components/StudentDashboard';
+const app = express();
+app.use(express.json());
+connectDB();
+app.use(cors({
+    origin: 'http://localhost:3000',  // Allow requests from the React app
+    credentials: true,
+  }));
+  
+app.use(bodyParser.json());
+app.use('/api/auth', require('./Routes/authRoutes')); // Add auth routes
+app.use('/api/dep', require('./Routes/departmentRoutes'));
+app.use('/api/office', require('./Routes/officeRoutes'));
+app.use('/api/mess', require('./Routes/messRoutes'));
+app.use('/api/students',require('./Routes/studentRoutes')) ;
+app.use(cors({ origin: 'http://localhost:3000' }));
 
-function App() {
-  return (
-    <Router>
-      <div className="App">
-        <Routes>
-          <Route path="/" element={<Home />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
-          <Route path="/request-food" element={<RequestFood />} />
-          <Route path="/mess-dashboard" element={<MessDashboard />} />
-          <Route path="/office-dashboard" element={<OfficeDashboard />} />
-          <Route path="/StudentDashboard" element={<StudentDashboard />} />
-        </Routes>
-      </div>
-    </Router>
-  );
-}
-
-export default App;
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
