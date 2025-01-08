@@ -1,0 +1,81 @@
+/* Home.css */
+
+.outer-container {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('Home.jpg'); /* Path to your image in the public folder */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Parallax effect */
+  }
+  
+  .inner-container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: white;
+  }
+  
+  h1 {
+    font-size: 4rem;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+  }
+  
+  a {
+    color: #f1f1f1;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 5px;
+    margin: 0 15px;
+    transition: all 0.3s ease;
+  }
+  
+  a:hover {
+    color: black;
+    transform: translateY(-5px); /* Slight lift on hover */
+  }
+  
+  a:active {
+    transform: translateY(2px); /* Button press effect */
+  }
+  
+  /* Register Button Styling */
+  .register-btn {
+    background-color: #ec0808; /* Red */
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+  }
+  
+  .register-btn:hover {
+    background-color: #f30707; /* Darker red on hover */
+  }
+  
+  .register-btn:active {
+    transform: translateY(2px); /* Button press effect */
+  }
+  
+  /* Login Button Styling */
+  .login-btn {
+    background-color: #0e7df3; /* Blue */
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+  }
+  
+  .login-btn:hover {
+    background-color: #f51809; /* Darker blue on hover */
+  }
+  
+  .login-btn:active {
+    transform: translateY(2px); /* Button press effect */
+  }
+  

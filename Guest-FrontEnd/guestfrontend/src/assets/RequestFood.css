@@ -1,0 +1,108 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+  }
+  
+  /* Form Container */
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  form input,
+  form select,
+  form textarea,
+  form button {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  form input:focus,
+  form select:focus,
+  form textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Response Message */
+  form p {
+    text-align: center;
+    font-size: 14px;
+    color: #28a745;
+  }
+  
+  /* Food Items Section */
+  h3 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  div > div {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    max-width: 200px;
+    padding: 10px;
+    background-color: #ffffff;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  
+  div > div:hover {
+    transform: scale(1.05);
+  }
+  
+  div img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  div h4 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+    color: #007bff;
+  }
+  
+  div p {
+    margin: 0;
+    font-size: 16px;
+    color: #555;
+  }
+  
