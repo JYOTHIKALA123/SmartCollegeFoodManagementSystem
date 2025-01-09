@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json());
 connectDB();
 app.use(cors({
-    origin: 'http://localhost:3000',  // Allow requests from the React app
+    origin: 'http://localhost:3001',  // Allow requests from the React app
     credentials: true,
   }));
   
