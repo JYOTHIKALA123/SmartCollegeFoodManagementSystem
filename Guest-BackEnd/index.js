@@ -1,5 +1,5 @@
 const express = require('express');
-const connectDB = require('./config/database');
+const connectDB = require('./Config/database');
 const bodyParser = require('body-parser');
 require('dotenv').config();
 
