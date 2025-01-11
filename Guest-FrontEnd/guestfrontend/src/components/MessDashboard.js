@@ -6,7 +6,7 @@ function MessDashboard() {
 
   const fetchRequests = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/mess/all', {
+      const response = await axios.get('https://collegefoodmanagement.onrender.com/api/mess/all', {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
 
@@ -25,7 +25,7 @@ function MessDashboard() {
 
   const handleStatusChange = async (requestId) => {
     try {
-      await axios.post(`http://localhost:5000/api/mess/complete`, { id: requestId }, {
+      await axios.post(`https://collegefoodmanagement.onrender.com/api/mess/complete`, { id: requestId }, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
       alert(`Request marked as Completed`);
