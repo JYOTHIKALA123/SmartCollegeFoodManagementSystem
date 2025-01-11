@@ -15,7 +15,7 @@ const RequestFood = () => {
 
     try {
       const response = await axios.post(
-        'https://collegefoodmanagement.onrender.com/api/dep/request-food',
+        'http://localhost:5000/api/dep/request-food',
         {
           departmentName,
           eventDate,

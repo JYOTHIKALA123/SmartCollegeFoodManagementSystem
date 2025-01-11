@@ -16,7 +16,7 @@ const OfficeDashboard = () => {
   const fetchPendingRequests = async () => {
     try {
       setLoading(true);
-      const response = await axios.get('https://collegefoodmanagement.onrender.com/api/office/pending', {
+      const response = await axios.get('http://localhost:5000/api/office/pending', {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
@@ -34,7 +34,7 @@ const OfficeDashboard = () => {
   const fetchCompletedRequests = async () => {
     try {
       setLoading(true);
-      const response = await axios.get('https://collegefoodmanagement.onrender.com/api/office/completed', {
+      const response = await axios.get('http://localhost:5000/api/office/completed', {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
@@ -53,7 +53,7 @@ const OfficeDashboard = () => {
     try {
       setLoading(true);
       await axios.post(
-        `https://collegefoodmanagement.onrender.com/api/office/approve`,
+        `http://localhost:5000/api/office/approve`,
         {
           departmentName: request.departmentName,
           eventDate: request.eventDate,
@@ -88,7 +88,7 @@ const OfficeDashboard = () => {
       };
   
       // Send delete request
-      await axios.delete('https://collegefoodmanagement.onrender.com/api/office/deleteCompletedRequest', {
+      await axios.delete('http://localhost:5000/api/office/deleteCompletedRequest', {
         data: dataToDelete,
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,

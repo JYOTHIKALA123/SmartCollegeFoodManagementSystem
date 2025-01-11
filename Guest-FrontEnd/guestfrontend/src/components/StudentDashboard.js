@@ -19,7 +19,7 @@ const StudentDashboard = () => {
 
     try {
       const response = await axios.post(
-        'https://collegefoodmanagement.onrender.com/api/students/request-food',
+        'http://localhost:5000/api/students/request-food',
         {
           studentName,
           eventDate,
