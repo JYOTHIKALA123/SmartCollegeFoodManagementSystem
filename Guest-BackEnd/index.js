@@ -9,6 +9,7 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(bodyParser.json());
+app.use(cors({ origin: 'https://smart-client.vercel.app/login', credentials: true }));
 
 // Connect to MongoDB
 connectDB();
